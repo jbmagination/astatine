@@ -12,4 +12,4 @@ RUN apt-get update                                    && \
 
 COPY . .
 EXPOSE 9000
-CMD [ "node", "src/cobalt" ]
+CMD [ "node", "src/astatine" ]

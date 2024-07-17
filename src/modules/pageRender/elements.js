@@ -159,7 +159,7 @@ export function popupWithBottomButtons(obj) {
     </div>`
 }
 export function socialLink(emji, name, url) {
-    return `<div class="cobalt-support-link">${emji} <a class="text-backdrop link" href="${url}" target="_blank">${name}</a></div>`
+    return `<div class="astatine-support-link">${emji} <a class="text-backdrop link" href="${url}" target="_blank">${name}</a></div>`
 }
 export function socialLinks(lang) {
     let links = authorInfo.support[lang] ? authorInfo.support[lang] : authorInfo.support.default;

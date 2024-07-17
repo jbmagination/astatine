@@ -17,19 +17,19 @@ export async function loadLoc() {
 
 export function replaceBase(s) {
     return s
-            .replace(/\n/g, '<br>')
-            .replace(/{saveToGalleryShortcut}/g, links.saveToGalleryShortcut)
-            .replace(/{saveToFilesShortcut}/g, links.saveToFilesShortcut)
-            .replace(/{repo}/g, repo)
-            .replace(/{statusPage}/g, links.statusPage)
-            .replace(/\*;/g, "&bull;");
+            .replaceAll(/\n/g, '<br>')
+            .replaceAll(/{saveToGalleryShortcut}/g, links.saveToGalleryShortcut)
+            .replaceAll(/{saveToFilesShortcut}/g, links.saveToFilesShortcut)
+            .replaceAll(/{repo}/g, repo)
+            .replaceAll(/{statusPage}/g, links.statusPage)
+            .replaceAll(/\*;/g, "&bull;");
 }
 export function replaceAll(lang, str, string, replacement) {
     let s = replaceBase(str[string])
-    if (replacement) s = s.replace(/{s}/g, replacement);
+    if (replacement) s = s.replaceAll(/{s}/g, replacement);
     if (s.match('{')) {
         Object.keys(loc[lang]["substrings"]).forEach(sub => {
-            s = replaceBase(s.replace(`{${sub}}`, loc[lang]["substrings"][sub]))
+            s = replaceBase(s.replaceAll(`{${sub}}`, loc[lang]["substrings"][sub]))
         });
     }
     return s

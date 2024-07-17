@@ -61,19 +61,19 @@ export default function(obj) {
         <meta charset="utf-8">
         <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
 
-        <title>${t("AppTitleCobalt")}</title>
+        <title>${t("AppTitleAstatine")}</title>
 
         <meta property="og:url" content="${env.webURL}">
-        <meta property="og:title" content="${t("AppTitleCobalt")}">
+        <meta property="og:title" content="${t("AppTitleAstatine")}">
         <meta property="og:description" content="${t('EmbedBriefDescription')}">
         <meta property="og:image" content="${env.webURL}icons/generic.png">
-        <meta name="title" content="${t("AppTitleCobalt")}">
-        <meta name="description" content="${t('AboutSummary')}">
+        <meta name="title" content="${t("AppTitleAstatine")}">
+        <meta name="description" content="${t('DescriptionSummary')}">
         <meta name="twitter:card" content="summary">
         
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="apple-mobile-web-app-title" content="${t("AppTitleCobalt")}">
+        <meta name="apple-mobile-web-app-title" content="${t("AppTitleAstatine")}">
 
         <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
         <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
@@ -83,13 +83,13 @@ export default function(obj) {
 
         <link rel="manifest" href="manifest.webmanifest">
         <link rel="stylesheet" href="fonts/notosansmono.css">
-        <link rel="stylesheet" href="cobalt.css">
+        <link rel="stylesheet" href="astatine.css">
 
         <meta name="theme-color" content="#000000">
 
         <link rel="preload" href="fonts/notosansmono.css" as="style">
-        <link rel="preload" href="assets/meowbalt/error.png" as="image">
-        <link rel="preload" href="assets/meowbalt/question.png" as="image">
+        <link rel="preload" href="assets/popout/error.png" as="image">
+        <link rel="preload" href="assets/popout/question.png" as="image">
 
         ${env.plausibleHostname ?
             `<script 
@@ -99,7 +99,7 @@ export default function(obj) {
             ></script>`
         : ''}
     </head>
-    <body id="cobalt-body">
+    <body id="astatine-body">
         <noscript>
             <div style="margin: 2rem;">${t('NoScriptMessage')}</div>
         </noscript>
@@ -275,17 +275,6 @@ export default function(obj) {
                     },
                     body: [{
                         text: `<div class="category-title">${t('DonateSub')}</div>`,
-                        raw: true
-                    }, {
-                        text: `
-                        <div class="changelog-banner">
-                            <img class="changelog-img" ` +
-                                `src="updateBanners/catsleep.webp" ` +
-                                `alt="${t("DonateImageDescription")}" ` +
-                                `width="480" ` +
-                                `height="270" ` +
-                                `onerror="this.style.opacity=0" loading="lazy">
-                        </div>`,
                         raw: true
                     }, {
                         text: t('DonateExplanation')
@@ -551,9 +540,9 @@ export default function(obj) {
                 classes: ["small"],
                 header: {
                     closeAria: t('AccessibilityGoBack'),
-                    emoji: `<img class="popout-meowbalt" `
+                    emoji: `<img class="popout" `
                               + `draggable="false" loading="lazy" `
-                              + `alt="😿" src="assets/meowbalt/question.png">`,
+                              + `alt="😿" src="assets/popout/question.png">`,
                     title: t('TitlePopupDownload')
                 },
                 body: switcher({
@@ -573,9 +562,9 @@ export default function(obj) {
                 buttonOnly: true,
                 classes: ["small"],
                 header: {
-                    emoji: `<img class="popout-meowbalt" `
+                    emoji: `<img class="popout" `
                               + `draggable="false" loading="lazy" `
-                              + `alt="😿" src="assets/meowbalt/error.png">`,
+                              + `alt="😿" src="assets/popout/error.png">`,
                 },
                 body: `<div id="desc-error" class="desc-padding subtext desc-error"></div>`,
                 buttonText: t('ErrorPopupCloseButton')
@@ -589,8 +578,8 @@ export default function(obj) {
                 visible: true,
                 action: "popup('about', 1, 'changelog')"
             })}
-            <div id="cobalt-main-box" class="center">
-                <div id="logo">${t("AppTitleCobalt")}${betaTag()}</div>
+            <div id="astatine-main-box" class="center">
+                <div id="logo">${t("AppTitleAstatine")}${betaTag()}</div>
                 <div id="download-area">
                     <div id="top">
                         <div id="link-icon">${linkSVG}</div>
@@ -656,7 +645,7 @@ export default function(obj) {
                 'DownloadPopupDescriptionIOS'
             ])}
         </script>
-        <script src="cobalt.js"></script>
+        <script src="astatine.js"></script>
     </body>
 </html>
 `

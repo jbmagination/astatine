@@ -196,10 +196,10 @@ export function runAPI(express, app, gitCommit, gitBranch, __dirname) {
             return res.sendStatus(404);
         }
 
-        streamInfo.headers = {
-            ...streamInfo.headers,
-            ...req.headers
-        };
+        streamInfo.headers = new Map([
+            ...(streamInfo.headers || []),
+            ...Object.entries(req.headers)
+        ]);
 
         return stream(res, { type: 'internal', ...streamInfo });
     })
@@ -221,7 +221,7 @@ export function runAPI(express, app, gitCommit, gitBranch, __dirname) {
 
     app.listen(env.apiPort, env.listenAddress, () => {
         console.log(`\n` +
-            `${Cyan("cobalt")} API ${Bright(`v.${version}-${gitCommit} (${gitBranch})`)}\n` +
+            `${Cyan("astatine")} API ${Bright(`v.${version}-${gitCommit} (${gitBranch})`)}\n` +
             `Start time: ${Bright(`${startTime.toUTCString()} (${startTimestamp})`)}\n\n` +
             `URL: ${Cyan(`${env.apiURL}`)}\n` +
             `Port: ${env.apiPort}\n`
