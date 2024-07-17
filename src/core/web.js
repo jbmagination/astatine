@@ -88,7 +88,7 @@ export async function runWeb(express, app, gitCommit, gitBranch, __dirname) {
 
     app.listen(env.webPort, () => {
         console.log(`\n` +
-            `${Cyan("cobalt")} WEB ${Bright(`v.${version}-${gitCommit} (${gitBranch})`)}\n` +
+            `${Cyan("astatine")} WEB ${Bright(`v.${version}-${gitCommit} (${gitBranch})`)}\n` +
             `Start time: ${Bright(`${startTime.toUTCString()} (${startTimestamp})`)}\n\n` +
             `URL: ${Cyan(`${env.webURL}`)}\n` +
             `Port: ${env.webPort}\n`

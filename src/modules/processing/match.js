@@ -24,7 +24,10 @@ import streamable from "./services/streamable.js";
 import twitch from "./services/twitch.js";
 import rutube from "./services/rutube.js";
 import dailymotion from "./services/dailymotion.js";
+import snapchat from "./services/snapchat.js"
 import loom from "./services/loom.js";
+import facebook from "./services/facebook.js";
+import threads from "./services/threads.js";
 import odysee from "./services/odysee.js";
 
 let freebind;
@@ -189,15 +192,32 @@ export default async function(host, patternMatch, lang, obj) {
             case "dailymotion":
                 r = await dailymotion(patternMatch);
                 break;
+            case "snapchat":
+                r = await snapchat({
+                    url,
+                    username: patternMatch.username,
+                    storyId: patternMatch.storyId,
+                    spotlightId: patternMatch.spotlightId,
+                    shortLink: patternMatch.shortLink || false
+                });
+                break;
             case "loom":
                 r = await loom({
                     id: patternMatch.id
                 });
                 break;
-            case "odysee":
-                r = await odysee({
-                    id: patternMatch.id
+            case "facebook":
+                r = await facebook({
+                    ...patternMatch,
+                    sourceUrl: url.href
                 });
+                break;
+            case "threads":
+                r = await threads({
+                    ...patternMatch,
+                    quality: obj.vQuality,
+                    dispatcher
+                })
                 break;
             default:
                 return createResponse("error", {

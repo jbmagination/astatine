@@ -29,7 +29,7 @@ export async function buildFront(commitHash, branch) {
         }
         // build js & css
         await esbuild.build({
-            entryPoints: ['src/front/cobalt.js', 'src/front/cobalt.css'],
+            entryPoints: ['src/front/astatine.js', 'src/front/astatine.css'],
             outdir: 'build/min/',
             minify: true,
             loader: { '.js': 'js', '.css': 'css', },

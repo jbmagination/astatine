@@ -76,7 +76,7 @@ const changeDownloadButton = (action, text) => {
         case "hidden": // hidden, but only visible when alwaysVisibleButton is true
             eid("download-button").disabled = true
             if (sGet("alwaysVisibleButton") === "true") {
-                eid("download-button").value = '>>'
+                eid("download-button").value = '↓'
                 eid("download-button").style.padding = '0 1rem'
             } else {
                 eid("download-button").value = ''
@@ -90,7 +90,7 @@ const changeDownloadButton = (action, text) => {
             break;
         default:
             eid("download-button").disabled = false
-            eid("download-button").value = '>>'
+            eid("download-button").value = '↓'
             eid("download-button").style.padding = '0 1rem'
             break;
     }
@@ -388,8 +388,8 @@ const checkbox = (action) => {
     sSet(action, !!eid(action).checked);
     switch(action) {
         case "alwaysVisibleButton": button(); break;
-        case "reduceTransparency": eid("cobalt-body").classList.toggle('no-transparency'); break;
-        case "disableAnimations": eid("cobalt-body").classList.toggle('no-animation'); break;
+        case "reduceTransparency": eid("astatine-body").classList.toggle('no-transparency'); break;
+        case "disableAnimations": eid("astatine-body").classList.toggle('no-animation'); break;
     }
 }
 
@@ -605,23 +605,23 @@ const restoreUpdateHistory = () => {
 const loadSettings = () => {
     if (sGet("alwaysVisibleButton") === "true") {
         eid("alwaysVisibleButton").checked = true;
-        eid("download-button").value = '>>'
+        eid("download-button").value = '↓'
         eid("download-button").style.padding = '0 1rem';
     }
     if (sGet("downloadPopup") === "true" && !isIOS) {
         eid("downloadPopup").checked = true;
     }
     if (sGet("reduceTransparency") === "true" || isOldFirefox) {
-        eid("cobalt-body").classList.add('no-transparency');
+        eid("astatine-body").classList.add('no-transparency');
     }
     if (sGet("disableAnimations") === "true") {
-        eid("cobalt-body").classList.add('no-animation');
+        eid("astatine-body").classList.add('no-animation');
     }
     if (!isMobile) {
-        eid("cobalt-body").classList.add('desktop');
+        eid("astatine-body").classList.add('desktop');
     }
     if (isAndroid) {
-        eid("cobalt-body").classList.add('android');
+        eid("astatine-body").classList.add('android');
     }
     if (isIOS) {
         eid("download-switcher")
@@ -681,7 +681,7 @@ eid("url-input-area").addEventListener("keyup", (e) => {
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "Tab") {
-        eid("download-button").value = '>>'
+        eid("download-button").value = '↓'
         eid("download-button").style.padding = '0 1rem'
     }
 })

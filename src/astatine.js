@@ -31,7 +31,7 @@ if (mode === 'API') {
     await runWeb(express, app, gitCommit, gitBranch, __dirname)
 } else {
     console.log(
-        Red(`cobalt wasn't configured yet or configuration is invalid.\n`)
+        Red(`astatine wasn't configured yet or configuration is invalid.\n`)
         + Bright(`please run the setup script to fix this: `)
         + Green(`npm run setup`)
     )

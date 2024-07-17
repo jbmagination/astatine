@@ -1,8 +1,8 @@
-# self-troubleshooting cobalt
+# self-troubleshooting astatine
 ```
 🚧 this page is work-in-progress. expect more guides to be added in the future!
 ```
-if any issues occur while using cobalt, you can fix many of them yourself. this document aims to provide guides on how to fix most complicated of them.  
+if any issues occur while using astatine, you can fix many of them yourself. this document aims to provide guides on how to fix most complicated of them.  
 use wiki navigation on right to jump between solutions.  
 
 ## how to fix clipboard pasting in older versions of firefox
@@ -34,4 +34,4 @@ you can fix this issue by changing a single preference in `about:config`.
 
    ![screenshot showing "dom.events.asyncclipboard.readtext" preference on about:config page, this one with "true" text highlighted](images/troubleshooting/clipboard/toggled.png)
 
-6. go back to cobalt, reload the page, press `paste` button again. this time it works! enjoy simpler downloading experience :)
+6. go back to astatine, reload the page, press `paste` button again. this time it works! enjoy simpler downloading experience :)
