@@ -17,6 +17,7 @@ this list is not final and keeps expanding over time. if support for a service y
 | bilibili.com & bilibili.tv     | ✅            | ✅         | ✅         | ➖         | ➖              |
 | dailymotion                    | ✅            | ✅         | ✅         | ✅         | ✅              |
 | instagram posts & reels        | ✅            | ✅         | ✅         | ➖         | ➖              |
+| facebook videos                | ✅            | ❌         | ❌         | ➖         | ➖              |
 | loom                           | ✅            | ❌         | ✅         | ✅         | ➖              |
 | ok video                       | ✅            | ❌         | ✅         | ✅         | ✅              |
 | pinterest                      | ✅            | ✅         | ✅         | ➖         | ➖              |
@@ -44,6 +45,7 @@ this list is not final and keeps expanding over time. if support for a service y
 | service    | notes or features                                                                                                    |
 | :--------  | :-----                                                                                                               |
 | instagram  | supports reels, photos, and videos. lets you pick what to save from multi-media posts.                               |
+| facebook   | supports public accessible videos content only.                                                                      |
 | pinterest  | supports photos, gifs, videos and stories.                                                                           |
 | reddit     | supports gifs and videos.                                                                                            |
 | snapchat   | supports spotlights and stories. lets you pick what to save from stories.                                            |

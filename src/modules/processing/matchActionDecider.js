@@ -131,6 +131,7 @@ export default function(r, host, userFormat, isAudioOnly, lang, isAudioMuted, di
                     params = { type: "bridge" };
                     break;
 
+                case "facebook":
                 case "vine":
                 case "instagram":
                 case "tumblr":

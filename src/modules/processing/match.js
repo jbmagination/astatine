@@ -26,6 +26,7 @@ import rutube from "./services/rutube.js";
 import dailymotion from "./services/dailymotion.js";
 import snapchat from "./services/snapchat.js";
 import loom from "./services/loom.js";
+import facebook from "./services/facebook.js";
 
 let freebind;
 
@@ -200,6 +201,11 @@ export default async function(host, patternMatch, lang, obj) {
             case "loom":
                 r = await loom({
                     id: patternMatch.id
+                });
+            case "facebook":
+                r = await facebook({
+                    ...patternMatch,
+                    sourceUrl: url.href
                 });
                 break;
             default:
