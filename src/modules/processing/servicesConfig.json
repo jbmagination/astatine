@@ -1,5 +1,5 @@
 {
-    "audioIgnore": ["vk", "ok", "loom"],
+    "audioIgnore": ["vk", "ok", "loom", "odysee"],
     "hlsExceptions": ["dailymotion", "vimeo", "rutube"],
     "config": {
         "bilibili": {
@@ -114,9 +114,39 @@
             "patterns": ["video/:id"],
             "enabled": true
         },
+        "snapchat": {
+            "alias": "snapchat stories & spotlights",
+            "subdomains": ["t", "story"],
+            "patterns": [":shortLink", "spotlight/:spotlightId", "add/:username/:storyId", "u/:username/:storyId", "add/:username", "u/:username"],
+            "enabled": true
+        },
         "loom": {
             "alias": "loom videos",
             "patterns": ["share/:id"],
+            "enabled": true
+        },
+        "facebook": {
+            "alias": "facebook videos",
+            "altDomains": ["fb.watch"],
+            "subdomains": ["web"],
+            "patterns": [
+                "_shortLink/:shortLink",
+                ":username/videos/:caption/:id",
+                ":username/videos/:id",
+                "reel/:id",
+                "share/:shortLink/:id"
+            ],
+            "enabled": true
+        },
+        "threads": {
+            "alias": "threads posts",
+            "tld": "net",
+            "patterns": [":user/post/:id"],
+            "enabled": true
+        },
+        "odysee": {
+            "alias": "odysee videos",
+            "patterns": [":creator/:id", ":id"],
             "enabled": true
         },
         "newgrounds": {

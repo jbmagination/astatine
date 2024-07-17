@@ -73,6 +73,8 @@ export default function(r, host, userFormat, isAudioOnly, lang, isAudioMuted, di
             switch (host) {
                 case "instagram":
                 case "twitter":
+                case "snapchat":
+                case "threads":
                     params = { picker: r.picker };
                     break;
                 case "tiktok":
@@ -131,12 +133,16 @@ export default function(r, host, userFormat, isAudioOnly, lang, isAudioMuted, di
                     params = { type: "bridge" };
                     break;
 
+                case "facebook":
                 case "vine":
                 case "instagram":
                 case "tumblr":
                 case "pinterest":
                 case "streamable":
+                case "snapchat":
                 case "loom":
+                case "threads":
+                case "odysee":
                     break;
             }
             break;

@@ -220,7 +220,7 @@ button:active,
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#cobalt-main-box {
+#astatine-main-box {
     position: fixed;
     width: 40rem;
     height: auto;
@@ -246,12 +246,12 @@ button:active,
     flex-direction: column;
     width: 100%;
 }
-#cobalt-main-box #top {
+#astatine-main-box #top {
     display: inline-flex;
     height: 2.5rem;
     flex-direction: row;
 }
-#cobalt-main-box #bottom {
+#astatine-main-box #bottom {
     padding-top: calc(1rem - var(--padding-small));
     display: flex;
     flex-direction: row;
@@ -308,7 +308,7 @@ button:active,
     color: var(--accent-subtext);
     cursor: not-allowed;
 }
-#cobalt-main-box .switch,
+#astatine-main-box .switch,
 #footer .switch {
     box-shadow: 0 0 0 0.1rem var(--accent-highlight) inset;
 }
@@ -322,7 +322,7 @@ button:active,
     font-size: 0.9rem;
     text-align: center;
 }
-#cobalt-main-box #bottom,
+#astatine-main-box #bottom,
 #footer-buttons,
 #footer-buttons, .footer-pair {
     gap: var(--gap);
@@ -353,7 +353,7 @@ button:active,
 .text-backdrop.link {
     text-decoration: underline;
 }
-.cobalt-support-link {
+.astatine-support-link {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -451,7 +451,7 @@ button:active,
     justify-content: center;
     align-items: center;
 }
-.popout-meowbalt {
+.popout {
     position: absolute;
     top: -7rem;
     user-select: none;
@@ -460,7 +460,7 @@ button:active,
     height: 180px;
     width: 180px;
 }
-#popup-download .popout-meowbalt {
+#popup-download .popout {
     left: -2rem;
 }
 .popup.scrollable {
@@ -765,7 +765,7 @@ button:active,
     margin-top: 0!important;
     margin-bottom: var(--padding);
 }
-#cobalt-main-box #bottom button {
+#astatine-main-box #bottom button {
     width: auto;
     padding: var(--gap) 0.9rem;
 }
@@ -1046,7 +1046,7 @@ button:active,
     }
 }
 @media screen and (max-width: 660px) {
-    #cobalt-main-box {
+    #astatine-main-box {
         width: calc(100% - (var(--padding) * 2));
     }
 }
@@ -1063,10 +1063,10 @@ button:active,
     }
 }
 @media screen and (max-width: 535px) {
-    #cobalt-main-box #bottom {
+    #astatine-main-box #bottom {
         flex-direction: row-reverse;
     }
-    #cobalt-main-box #bottom #audioMode button, #audioMode {
+    #astatine-main-box #bottom #audioMode button, #audioMode {
         width: 100%;
     }
     #footer-buttons {
@@ -1083,7 +1083,7 @@ button:active,
         height: auto;
         justify-content: center;
     }
-    #cobalt-main-box {
+    #astatine-main-box {
         display: flex;
         border: none;
         padding: 0;
@@ -1120,7 +1120,7 @@ button:active,
         position: absolute;
         transform: translateY(30rem);
     }
-    #popup-download .popout-meowbalt {
+    #popup-download .popout {
         left: unset;
     }
     .glass-bkg.small {

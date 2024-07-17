@@ -1,6 +1,6 @@
 ---
 name: bug report
-about: report a global issue with the cobalt codebase
+about: report a global issue with the astatine codebase
 title: '[short description of the bug]'
 labels: bug
 assignees: ''

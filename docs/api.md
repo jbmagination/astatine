@@ -1,12 +1,8 @@
-# cobalt api documentation
-this document provides info about methods and acceptable variables for all cobalt api requests.  
-
-```
-👍 you can use api.cobalt.tools in your projects for free, just don't be an asshole.
-```
+# astatine api documentation
+this document provides info about methods and acceptable variables for all astatine api requests.  
 
 ## POST: `/api/json`
-cobalt's main processing endpoint.  
+astatine's main processing endpoint.  
 
 request body type: `application/json`  
 response body type: `application/json`  
@@ -35,26 +31,26 @@ Content-Type: application/json
 | `tiktokH265`      | `boolean` | `true / false`                     | `false`   | changes whether 1080p h265 videos are preferred or not.                         |
 
 ### response body variables
-| key          | type     | variables                                                   |
-|:-------------|:---------|:------------------------------------------------------------|
-| `status`     | `string` | `error / redirect / stream / success / rate-limit / picker` |
-| `text`       | `string` | various text, mostly used for errors                        |
-| `url`        | `string` | direct link to a file or a link to cobalt's live render     |
-| `pickerType` | `string` | `various / images`                                          |
-| `picker`     | `array`  | array of picker items                                       |
-| `audio`      | `string` | direct link to a file or a link to cobalt's live render     |
+| key          | type     | variables                                                     |
+|:-------------|:---------|:--------------------------------------------------------------|
+| `status`     | `string` | `error / redirect / stream / success / rate-limit / picker`   |
+| `text`       | `string` | various text, mostly used for errors                          |
+| `url`        | `string` | direct link to a file or a link to astatine's live render     |
+| `pickerType` | `string` | `various / images`                                            |
+| `picker`     | `array`  | array of picker items                                         |
+| `audio`      | `string` | direct link to a file or a link to astatine's live render     |
 
 ### picker item variables
 item type: `object` 
 
-| key     | type     | variables                                               | description                            |
-|:--------|:---------|:--------------------------------------------------------|:---------------------------------------|
-| `type`  | `string` | `video`                                                 | used only if `pickerType`is `various`. |
-| `url`   | `string` | direct link to a file or a link to cobalt's live render |                                        |
-| `thumb` | `string` | item thumbnail that's displayed in the picker           | used only for `video` type.            |
+| key     | type     | variables                                                 | description                            |
+|:--------|:---------|:----------------------------------------------------------|:---------------------------------------|
+| `type`  | `string` | `video`                                                   | used only if `pickerType`is `various`. |
+| `url`   | `string` | direct link to a file or a link to astatine's live render |                                        |
+| `thumb` | `string` | item thumbnail that's displayed in the picker             | used only for `video` type.            |
 
 ## GET: `/api/stream`
-cobalt's live render (or stream) endpoint. usually, you will receive a url to this endpoint
+astatine's live render (or stream) endpoint. usually, you will receive a url to this endpoint
 from a successful call to `/api/json`. however, the parameters passed to it are **opaque**
 and **unmodifiable** from your (the api client's) perspective, and can change between versions.
 
@@ -68,7 +64,7 @@ response body type: `application/json`
 ### response body variables
 | key         | type     | variables         |
 |:------------|:---------|:------------------|
-| `version`   | `string` | cobalt version    |
+| `version`   | `string` | astatine version  |
 | `commit`    | `string` | git commit        |
 | `branch`    | `string` | git branch        |
 | `name`      | `string` | server name       |

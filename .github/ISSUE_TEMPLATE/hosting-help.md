@@ -1,6 +1,6 @@
 ---
 name: instance hosting help
-about: ask any question regarding cobalt instance hosting
+about: ask any question regarding astatine instance hosting
 title: '[short description of the problem]'
 labels: instance hosting help
 assignees: ''

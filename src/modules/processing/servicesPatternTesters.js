@@ -1,5 +1,5 @@
 export const testers = {
-    "bilibili": (patternMatch) => 
+    "bilibili": (patternMatch) =>
         patternMatch.comId?.length <= 12 || patternMatch.comShortLink?.length <= 16
         || patternMatch.tvId?.length <= 24,
 
@@ -15,6 +15,9 @@ export const testers = {
     "ok": (patternMatch) =>
         patternMatch.id?.length <= 16,
 
+    "odysee": (patternMatch) =>
+        patternMatch.id?.length <= 255,
+
     "pinterest": (patternMatch) =>
         patternMatch.id?.length <= 128 || patternMatch.shortLink?.length <= 32,
 
@@ -27,11 +30,19 @@ export const testers = {
         patternMatch.id?.length === 32 || patternMatch.yappyId?.length === 32,
 
     "soundcloud": (patternMatch) =>
-        (patternMatch.author?.length <= 255 && patternMatch.song?.length <= 255) 
+        (patternMatch.author?.length <= 255 && patternMatch.song?.length <= 255)
         || patternMatch.shortLink?.length <= 32,
+
+    "snapchat": (patternMatch) =>
+        (patternMatch.username?.length <= 32 && (!patternMatch.storyId || patternMatch.storyId?.length <= 255)) 
+        || patternMatch.spotlightId?.length <= 255 
+        || patternMatch.shortLink?.length <= 16,
 
     "streamable": (patternMatch) =>
         patternMatch.id?.length === 6,
+
+    "threads": (patternMatch) =>
+        patternMatch.user?.length <= 33 && patternMatch.id?.length <= 32,
 
     "tiktok": (patternMatch) =>
         patternMatch.postId?.length <= 21 || patternMatch.id?.length <= 13,
@@ -58,6 +69,12 @@ export const testers = {
 
     "youtube": (patternMatch) =>
         patternMatch.id?.length <= 11,
+
+    "facebook": (patternMatch) =>
+        patternMatch.shortLink?.length <= 11
+        || patternMatch.username?.length <= 30
+        || patternMatch.caption?.length <= 255
+        || patternMatch.id?.length <= 20,
 
     "newgrounds": (patternMatch) =>
         patternMatch.id?.length <= 6,
