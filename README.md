@@ -22,6 +22,7 @@ this list is not final and keeps expanding over time. if support for a service y
 | pinterest                      | ✅            | ✅         | ✅         | ➖         | ➖              |
 | reddit                         | ✅            | ✅         | ✅         | ❌         | ❌              |
 | rutube                         | ✅            | ✅         | ✅         | ✅         | ✅              |
+| snapchat stories & spotlights  | ✅            | ✅         | ✅         | ➖         | ➖              |
 | soundcloud                     | ➖            | ✅         | ➖         | ✅         | ✅              |
 | streamable                     | ✅            | ✅         | ✅         | ➖         | ➖              |
 | tiktok                         | ✅            | ✅         | ✅         | ❌         | ❌              |
@@ -45,6 +46,7 @@ this list is not final and keeps expanding over time. if support for a service y
 | instagram  | supports reels, photos, and videos. lets you pick what to save from multi-media posts.                               |
 | pinterest  | supports photos, gifs, videos and stories.                                                                           |
 | reddit     | supports gifs and videos.                                                                                            |
+| snapchat   | supports spotlights and stories. lets you pick what to save from stories.                                            |
 | rutube     | supports yappy & private links.                                                                                      |
 | soundcloud | supports private links.                                                                                              |
 | tiktok     | supports videos with or without watermark, images from slideshow without watermark, and full (original) audios.      |
